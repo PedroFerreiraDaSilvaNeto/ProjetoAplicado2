@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto aplicado 2 - 3° semestre</title>
+    <link rel="stylesheet" href=".cssstyle">
+    <link rel="shortcut icon" href="imagens/html5_favicon.ico" type="image/x-icon">
+
+    <style>
+        header{
+    background-image: linear-gradient(to bottom,  #17FA86, #1777FA);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
+header > h1{
+    color: white;
+    font-family: var(--font_fantasia);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.42);
+}
+
+header > p{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.42);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#22EAF5 ;
+}
+
+nav{
+    background-color:  #1777FA;
+    padding: 15px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.627);
+}
+nav > a{
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+nav > a:hover{
+    background-color:  #22EAF5;
+}
+nav > h2{
+    color: white;
+}
+nav > p{
+    color: white;
+    margin: 15px 0px;
+    text-align:justify ;
+    text-indent: 30px;
+    line-height: 2em;
+}
+
+.box{
+    color: white;
+    position:relative;
+    top:50%;
+    left:30%;
+    transform: translate(-1%, -1%);
+    background-color: rgba(0, 0, 0, 8%);
+    padding: 15px;
+    border-radius: 15px;
+    width: 40%;
+}
+fieldset{
+    border: 3px solid dodgerblue;
+}
+p{
+    border: 1px solid dodgerblue;
+    padding: 10px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8%;
+}
+
+.inputBox{
+    position: relative;
+}
+.InputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.InputUser:focus ~.labelInput,.InputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size:12px ;
+    color: dodgerblue;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+
+}
+   
+footer{
+    background-color:  #1777FA;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer  a{
+    color:  #22EAF5;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer  a:hover{
+    text-decoration: underline;
+    color:  #17FA86;
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>BANCO DE TALENTOS</h1>
+        <p>Projeto Aplicado 2 - 3° semestre</p>
+    </header>
+   
+    <nav>
+        <h2>Preencha seu Curriculo</h2>
+       
+    </nav>
+    <br>
+    <main>
+
+        <div class="box">
+            <form action="">
+                <fieldset>
+                        <p><b>Cadastro Banco de Talentos<b><p>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="InputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
+                    </div>
+                    <br><br>
+
+                    <div class="inputBox">
+                        <input type="text" name="CPF" id="CPF" class="InputUser" required>
+                        <label for="CPF" class="labelInput">CPF</label>
+                    </div>
+
+                    <br><br>
+                    <div>
+                        <label
+                        for="data_nascimento:"><b>Data de Nascimento</b>
+                       </label>
+                       <input type="date" name="data_nascimento" id="data_nascimento"  required>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="InputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="InputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="InputUser" required>
+                        <label for="cidade" class="labelInput">Cidade</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="estado" id="estado" class="InputUser" required>
+                        <label for="estado" class="labelInput">Estado</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="InputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <p>Área Profissional</p>
+                    <input type="radio" id="Comercial_Vendas" name="Area_Profissional" value="Comercial_Vendas" required>
+                    <label for="Comercial_Vendas">Comercial, Vendas</label>
+                    <br>
+                    <input type="radio" id="Telemarketing" name="Area_Profissional" value="Telemarketing" required>
+                    <label 
+                    for="Telemarketing">Telemarketing</label>
+                    <br>
+                    <input type="radio" id="Logistica" name="Area_Profissional" value="Logistica" required>
+                    <label for="Logistica">Logística</label>
+                    <br>
+                    <input type="radio" id="Industria" name="Area_Profissional" value="Industria" required>
+                    <label for="Industria">Industria - Produção - Fábrica</label>
+                    <br>
+                    <input type="radio" id="Alimento" name="Area_Profissional" value="Alimento" required>
+                    <label for="Alimento">Alimentação - Gastronomia</label>
+                    <br>
+                    <input type="radio" id="Admin" name="Area_Profissional" value="Admin" required>
+                    <label for="Admin">Administração</label>
+                    <br>
+                    <input type="radio" id="ServGerais" name="Area_Profissional" value="ServGerais" required>
+                    <label for="ServGerais">Serviços Gerais</label>
+                    <br>
+                    <input type="radio" id="ContruManu" name="Area_Profissional" value="ContruManu" required>
+                    <label for="ContruManu">Construção - Manutenção</label>
+                    <br>
+                    <input type="radio" id="TI" name="Area_Profissional" value="TI" required>
+                    <label for="TI">Informática - TI - Telecomunicações</label>
+                    <br>
+                    <input type="radio" id="Seg" name="Area_Profissional" value="Seg" required>
+                    <label for="Seg">Segurança</label>
+                    <br>
+                    <input type="radio" id="Economia" name="Area_Profissional" value="Economia" required>
+                    <label for="Economia">Contábil - Finanças - Economia</label>
+                    <br>
+                    <input type="radio" id="Saude" name="Area_Profissional" value="Saude" required>
+                    <label for="Saude">Saúde</label>
+                    <br><br><br>
+                    <div class="inputBox">
+                        <input type="text" name="profissao" id="profissao" class="InputUser" required>
+                        <label for="profissao" class="labelInput">Profissão</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="esperiencia" id="speriencia" class="InputUser" required>
+                        <label for="speriencia" class="labelInput">Experiência Proficional</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        <p>
+            
+            Site criado por <a href="https://www.instagram.com/pedro1977ferreira/"target="_blank">Pedro Ferreira</a> e Bruno Bonetti - UC - Projeto Aplicado 2 - 3° semestre / Analise e desenvolvimento de sistema /<a href="https://unisenaisc.com.br/"target="_blank"> UniSenai</a>
+        </p> 
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script> 
+    $('#CPF').mask('000.000.000-00', {reverse: true});
+    $('#telefone').mask('(00) 00000-0000');
+    </script>
+</body>
+</html>
